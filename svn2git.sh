@@ -11,9 +11,6 @@ else
 	exit 0
 fi
 
-git config user.name "sunyi"
-git config user.email "sunyi@xxx.com"
-
 cd $WORK_SPACES
 echo "cd $WORK_SPACES"
 
