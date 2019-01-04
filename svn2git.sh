@@ -11,8 +11,8 @@ else
 	exit 0
 fi
 
-git config user.name "阳明"
-git config user.email "yangming@tongbanjie.com"
+git config user.name "sunyi"
+git config user.email "sunyi@xxx.com"
 
 cd $WORK_SPACES
 echo "cd $WORK_SPACES"
@@ -33,12 +33,12 @@ do
 
 
 	# 利用 gitlab 的 http api 接口创建 project
-	echo "curl -d \"name=$APP&namespace_id=$GITLAB_GROUP_ID&wiki_enabled=true&visibility_level=0\" \"http://git.tongbanjie.com/api/v3/projects?private_token=Csy2yXaBbwMprVRM7yUi\""
-	curl -d "name=$APP&namespace_id=$GITLAB_GROUP_ID&wiki_enabled=true&visibility_level=0" "http://git.tongbanjie.com/api/v3/projects?private_token=Csy2yXaBbwMprVRM7yUi"
+	echo "curl -d \"name=$APP&namespace_id=$GITLAB_GROUP_ID&wiki_enabled=true&visibility_level=0\" \"http://git.xxx.com/api/v3/projects?private_token=Csy2yXaBbwMprVRM7yUi\""
+	curl -d "name=$APP&namespace_id=$GITLAB_GROUP_ID&wiki_enabled=true&visibility_level=0" "http://git.xxx.com/api/v3/projects?private_token=Csy2yXaBbwMprVRM7yUi"
 	
 	# 关联gitlab project
-	echo "git remote add origin git@yangming.git.tongbanjie.com:$GITLAB_GROUP_NAME/$APP.git"
-	git remote add origin git@yangming.git.tongbanjie.com:$GITLAB_GROUP_NAME/$APP.git
+	echo "git remote add origin git@sunyi.git.xxx.com:$GITLAB_GROUP_NAME/$APP.git"
+	git remote add origin git@sunyi.git.xxx.com:$GITLAB_GROUP_NAME/$APP.git
 
 	# 先上传 master ，目前看起来  gitlab 将第一个上传的branch作为默认
 	git checkout master
